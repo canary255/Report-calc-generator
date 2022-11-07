@@ -25,20 +25,64 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * Custom Width
+   */
+  width?: number;
+  /**
+   * Custom Height
+   */
+  height?: number;
+  /**
+   * Border Radius
+   */
+  borderRadius?: "left" | "right" | "top" | "bottom" | "none" | "all";
 }
 
-/**
- * Primary UI component for user interaction
- */
+function getBorderRadius(borderRadius: string) {
+  if (borderRadius === "left") {
+    return "12px 0 0 12px";
+  }
+  if (borderRadius === "right") {
+    return "0 12px 12px 0";
+  }
+  if (borderRadius === "top") {
+    return "12px 12px 0 0";
+  }
+  if (borderRadius === "bottom") {
+    return "0 0 12px 12px";
+  }
+  if (borderRadius === "none") {
+    return "0";
+  }
+  if (borderRadius === "all") {
+    return "12px";
+  }
+}
+
 export const ButtonOption = ({
   variant = "contained",
   size = "medium",
   backgroundColor = "primary",
   label,
+  height,
+  width,
+  borderRadius,
   ...props
 }: ButtonProps) => {
+  const custom = {
+    height: height,
+    width: width,
+    borderRadius: borderRadius ? getBorderRadius(borderRadius) : "",
+  };
   return (
-    <Button color={backgroundColor} variant={variant} size={size} {...props}>
+    <Button
+      color={backgroundColor}
+      sx={{ ...custom }}
+      variant={variant}
+      size={size}
+      {...props}
+    >
       {label}
     </Button>
   );

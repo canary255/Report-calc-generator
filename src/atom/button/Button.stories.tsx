@@ -6,9 +6,7 @@ import { ButtonOption } from "./Button";
 export default {
   title: "Atom/Button",
   component: ButtonOption,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof ButtonOption>;
 
 const Template: ComponentStory<typeof ButtonOption> = (args) => (
@@ -36,4 +34,25 @@ export const Small = Template.bind({});
 Small.args = {
   size: "small",
   label: "Button",
+};
+
+export const CustomSize = Template.bind({});
+CustomSize.args = {
+  height: 100,
+  width: 100,
+  label: "Button",
+};
+
+export const RoundedBorder = Template.bind({});
+RoundedBorder.args = {
+  borderRadius: "all",
+  label: "Button",
+};
+
+export const CustomBorderSide = Template.bind({});
+CustomBorderSide.args = {
+  borderRadius: "left",
+  label: "Button",
+  width: 50,
+  height: 50,
 };
