@@ -18,10 +18,10 @@ Primary.args = {
   label: "Default Primary",
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  backgroundColor: "secondary",
-  label: "Secondary",
+export const Disabled = Template.bind({});
+Disabled.args = {
+  backgroundColor: "inherit",
+  label: "Disabled",
 };
 
 export const Large = Template.bind({});

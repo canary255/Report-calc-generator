@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { MenuItem, Select } from "@mui/material";
 
 type SelectorProps = {
   label: string;
@@ -16,24 +16,21 @@ export const Selector = ({
   onChange,
 }: SelectorProps) => {
   return (
-    <FormControl>
-      <InputLabel id={name}>{label}</InputLabel>
-      <Select
-        value={value}
-        id={name}
-        labelId={name}
-        label={label}
-        onChange={onChange}
-      >
-        <MenuItem value="">
-          <em>None</em>
+    <Select
+      value={value}
+      id={name}
+      labelId={name}
+      label={label}
+      onChange={onChange}
+    >
+      <MenuItem value="">
+        <em>None</em>
+      </MenuItem>
+      {options.map((option, i) => (
+        <MenuItem key={i} value={option.value}>
+          {option.label}
         </MenuItem>
-        {options.map((option, i) => (
-          <MenuItem key={i} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+      ))}
+    </Select>
   );
 };
