@@ -15,8 +15,7 @@ const Template: ComponentStory<typeof RoundedImage> = (args) => (
   <RoundedImage {...args} />
 );
 
-const url =
-  "https://www.pngplay.com/wp-content/uploads/12/Zacian-Pokemon-Background-PNG.png";
+const url = "https://www.cpokemon.com/pokes/home/888-1.png";
 
 export const Rounded = Template.bind({});
 Rounded.args = {
