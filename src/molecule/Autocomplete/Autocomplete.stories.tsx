@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { TextInput } from "./Textinput";
+import { TextInput } from "./Autocomplete";
 
 export default {
-  title: "Molecule/Autocomplete",
+  title: "Molecule/TextInput",
   component: TextInput,
   argTypes: {},
 } as ComponentMeta<typeof TextInput>;

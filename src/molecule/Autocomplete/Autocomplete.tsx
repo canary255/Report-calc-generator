@@ -1,7 +1,7 @@
 import { Label } from "../../atom/Label/Label";
 import { TextFieldComponent } from "../../atom/Textfield/Textfield";
 
-type TextinputProps = {
+type SelectorProps = {
   name: string;
   placeholder?: string;
   value?: string;
@@ -13,7 +13,7 @@ export const TextInput = ({
   name,
   value,
   onChange,
-}: TextinputProps) => {
+}: SelectorProps) => {
   return (
     <>
       <Label name={name}>Example</Label>

@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 
-type SelectorProps = {
+type TextFieldProps = {
   name: string;
   placeholder?: string;
   value?: string;
@@ -12,7 +12,7 @@ export const TextFieldComponent = ({
   name,
   value,
   onChange,
-}: SelectorProps) => {
+}: TextFieldProps) => {
   return (
     <TextField id={name} placeholder={placeholder} onChange={onChange}>
       {value}

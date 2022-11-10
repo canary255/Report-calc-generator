@@ -1,18 +1,18 @@
 import { Box, Paper } from "@mui/material";
 
-type RoundedImageProps = {
+type SpriteProps = {
   src: string;
   alt?: string;
   backgroundColor?: "red" | "green" | "yellow";
 };
 
-function getColor(backgroundColor: RoundedImageProps["backgroundColor"]) {
+function getColor(backgroundColor: SpriteProps["backgroundColor"]) {
   if (backgroundColor === "green") return "#8ed794";
   if (backgroundColor === "yellow") return "#f1f17b";
   return "#f14f53";
 }
 
-export const Sprite = ({ src, alt, backgroundColor }: RoundedImageProps) => {
+export const Sprite = ({ src, alt, backgroundColor }: SpriteProps) => {
   const SIZE = 64;
   const width = SIZE;
   const height = SIZE;

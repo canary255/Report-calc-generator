@@ -1,6 +1,6 @@
-import { TextField, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
-type SelectorProps = {
+type TypographyProps = {
   children: string;
   variant?:
     | "h1"
@@ -22,7 +22,7 @@ type SelectorProps = {
 export const TypographyComponent = ({
   children,
   variant = "h1",
-}: SelectorProps) => {
+}: TypographyProps) => {
   return (
     <Typography variant={variant} gutterBottom>
       {children}
