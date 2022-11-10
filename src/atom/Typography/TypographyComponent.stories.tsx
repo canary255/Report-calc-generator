@@ -6,9 +6,7 @@ import { TypographyComponent } from "./TypographyComponent";
 export default {
   title: "Atom/Typgraphy",
   component: TypographyComponent,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof TypographyComponent>;
 
 const Template: ComponentStory<typeof TypographyComponent> = (args) => (

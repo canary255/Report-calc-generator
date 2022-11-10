@@ -6,9 +6,7 @@ import { Label } from "./Label";
 export default {
   title: "Atom/Label",
   component: Label,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Label>;
 
 const Template: ComponentStory<typeof Label> = (args) => <Label {...args} />;

@@ -6,9 +6,7 @@ import { RoundedImage } from "./RoundedImage";
 export default {
   title: "Atom/RoundedImage",
   component: RoundedImage,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof RoundedImage>;
 
 const Template: ComponentStory<typeof RoundedImage> = (args) => (

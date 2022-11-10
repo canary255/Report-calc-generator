@@ -6,9 +6,7 @@ import { Selector } from "./Selector";
 export default {
   title: "Atom/Selector",
   component: Selector,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Selector>;
 
 const list = [

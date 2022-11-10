@@ -6,9 +6,7 @@ import { Sprite } from "./Sprite";
 export default {
   title: "Atom/Sprite",
   component: Sprite,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Sprite>;
 
 const Template: ComponentStory<typeof Sprite> = (args) => <Sprite {...args} />;

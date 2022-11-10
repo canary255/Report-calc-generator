@@ -6,9 +6,7 @@ import { TextFieldComponent } from "./Textfield";
 export default {
   title: "Atom/Textfield",
   component: TextFieldComponent,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof TextFieldComponent>;
 
 const Template: ComponentStory<typeof TextFieldComponent> = (args) => (
