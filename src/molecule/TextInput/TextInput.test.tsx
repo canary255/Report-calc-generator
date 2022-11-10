@@ -1,13 +1,13 @@
 import { describe, expect, test } from "@jest/globals";
 
-import { TypographyComponent } from "./TypographyComponent";
+import { TextInput } from "./Textinput";
 
 describe("Testing Selector component", () => {
   test("Selector component should be defined", () => {
-    expect(TypographyComponent).toBeDefined();
+    expect(TextInput).toBeDefined();
   });
 
   test("Selector component should render correctly", () => {
-    expect(TypographyComponent).toMatchSnapshot();
+    expect(TextInput).toMatchSnapshot();
   });
 });

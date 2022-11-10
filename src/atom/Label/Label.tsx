@@ -1,10 +1,10 @@
 import { InputLabel } from "@mui/material";
 
 type SelectorProps = {
-  label: string;
+  children: string;
   name: string;
 };
 
-export const Label = ({ label, name }: SelectorProps) => {
-  return <InputLabel id={name}>{label}</InputLabel>;
+export const Label = ({ children, name }: SelectorProps) => {
+  return <InputLabel id={name}>{children}</InputLabel>;
 };

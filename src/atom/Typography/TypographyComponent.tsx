@@ -1,7 +1,7 @@
 import { TextField, Typography } from "@mui/material";
 
 type SelectorProps = {
-  text: string;
+  children: string;
   variant?:
     | "h1"
     | "h2"
@@ -20,12 +20,12 @@ type SelectorProps = {
 };
 
 export const TypographyComponent = ({
-  text,
+  children,
   variant = "h1",
 }: SelectorProps) => {
   return (
     <Typography variant={variant} gutterBottom>
-      {text}
+      {children}
     </Typography>
   );
 };

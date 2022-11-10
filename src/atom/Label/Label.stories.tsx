@@ -13,6 +13,6 @@ const Template: ComponentStory<typeof Label> = (args) => <Label {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Insert your text here",
+  children: "Insert your text here",
   name: "pokemon",
 };
