@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { TextInput } from "./Textinput";
 
 export default {
-  title: "Molecule/Autocomplete",
+  title: "Molecule/TextInput",
   component: TextInput,
   argTypes: {},
 } as ComponentMeta<typeof TextInput>;
