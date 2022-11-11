@@ -8,7 +8,7 @@ type AutocompleteProps = {
 };
 
 export const AutocompleteInput = ({
-  label,
+  label = "",
   name,
   options = [],
   onChange,

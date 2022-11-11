@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { SelectorInput } from ".";
+import { AutocompleteField } from ".";
 
 export default {
-  title: "Molecule/SelectorInput",
-  component: SelectorInput,
+  title: "Molecule/AutocompleteInput",
+  component: AutocompleteField,
   argTypes: {},
-} as ComponentMeta<typeof SelectorInput>;
+} as ComponentMeta<typeof AutocompleteField>;
 
 const list = [
   { label: "Zacian", value: "888" },
@@ -16,8 +16,8 @@ const list = [
   { label: "Zekrom", value: "643" },
 ];
 
-const Template: ComponentStory<typeof SelectorInput> = (args) => (
-  <SelectorInput {...args} />
+const Template: ComponentStory<typeof AutocompleteField> = (args) => (
+  <AutocompleteField {...args} />
 );
 
 export const Default = Template.bind({});

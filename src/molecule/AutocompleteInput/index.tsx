@@ -1,6 +1,6 @@
 import { FormControl } from "@mui/material";
+import { AutocompleteInput } from "../../atom/Autocomplete";
 import { Label } from "../../atom/Label";
-import { Selector } from "../../atom/Selector";
 
 type TextinputProps = {
   name: string;
@@ -11,24 +11,21 @@ type TextinputProps = {
   onChange?: (e: any) => void;
 };
 
-export const SelectorInput = ({
+export const AutocompleteField = ({
   label = "",
   name,
   placeholder = "",
   options = [],
-  value,
   onChange,
 }: TextinputProps) => {
   return (
     <>
       <Label name={name}>{label}</Label>
       <FormControl fullWidth>
-        <Label name={name}>{placeholder}</Label>
-        <Selector
-          label={placeholder}
+        <AutocompleteInput
           name={name}
           options={options}
-          value={value}
+          label={placeholder}
           onChange={onChange}
         />
       </FormControl>
