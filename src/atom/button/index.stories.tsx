@@ -15,44 +15,44 @@ const Template: ComponentStory<typeof ButtonOption> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  label: "Default Primary",
+  children: "Default Primary",
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   backgroundColor: "inherit",
-  label: "Disabled",
+  children: "Disabled",
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: "large",
-  label: "Button",
+  children: "Button",
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: "small",
-  label: "Button",
+  children: "Button",
 };
 
 export const CustomSize = Template.bind({});
 CustomSize.args = {
   height: 100,
   width: 100,
-  label: "Button",
+  children: "Button",
 };
 
 export const RoundedBorder = Template.bind({});
 RoundedBorder.args = {
   borderRadius: "all",
-  label: "Button",
+  children: "Button",
 };
 
 export const CustomBorderSide = Template.bind({});
 CustomBorderSide.args = {
   borderRadius: "left",
-  label: "Button",
+  children: "Button",
   width: 50,
   height: 50,
 };

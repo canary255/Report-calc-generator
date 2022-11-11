@@ -20,7 +20,7 @@ interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  children: string;
   /**
    * Optional click handler
    */
@@ -64,7 +64,7 @@ export const ButtonOption = ({
   variant = "contained",
   size = "medium",
   backgroundColor = "primary",
-  label,
+  children,
   height,
   width,
   borderRadius,
@@ -83,7 +83,7 @@ export const ButtonOption = ({
       size={size}
       {...props}
     >
-      {label}
+      {children}
     </Button>
   );
 };
