@@ -1,7 +1,7 @@
 import { MenuItem, Select } from "@mui/material";
 
 type SelectorProps = {
-  label: string;
+  label?: string;
   name: string;
   value?: string;
   options?: { label: string; value: string }[];
@@ -9,7 +9,7 @@ type SelectorProps = {
 };
 
 export const Selector = ({
-  label,
+  label = "",
   name,
   value,
   options = [],

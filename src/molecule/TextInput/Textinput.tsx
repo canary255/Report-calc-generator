@@ -3,12 +3,14 @@ import { TextFieldComponent } from "../../atom/Textfield/Textfield";
 
 type TextinputProps = {
   name: string;
+  label?: string;
   placeholder?: string;
   value?: string;
   onChange?: (e: any) => void;
 };
 
 export const TextInput = ({
+  label = "",
   placeholder,
   name,
   value,
@@ -16,7 +18,7 @@ export const TextInput = ({
 }: TextinputProps) => {
   return (
     <>
-      <Label name={name}>Example</Label>
+      <Label name={name}>{label}</Label>
       <TextFieldComponent
         name={name}
         placeholder={placeholder}

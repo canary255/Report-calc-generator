@@ -15,8 +15,9 @@ const Template: ComponentStory<typeof TextInput> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  placeholder: "Insert your text here",
+  label: "Choose your pokemon",
   name: "pokemon",
+  placeholder: "Insert your text here",
 };
 
 export const Empty = Template.bind({});
