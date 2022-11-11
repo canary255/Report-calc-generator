@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { TextInput } from ".";
+import { WeatherButton } from ".";
 
 export default {
   title: "Molecule/Buttons/Weather",
-  component: TextInput,
+  component: WeatherButton,
   argTypes: {},
-} as ComponentMeta<typeof TextInput>;
+} as ComponentMeta<typeof WeatherButton>;
 
-const Template: ComponentStory<typeof TextInput> = (args) => (
-  <TextInput {...args} />
-);
+const Template: ComponentStory<typeof WeatherButton> = (args) => {
+  const [weather, setWeather] = useState("");
+  return (
+    <>
+      <WeatherButton
+        value={weather}
+        onClick={(e) => setWeather(e.target.value)}
+      />
+      {console.log(weather)}
+    </>
+  );
+};
 
 export const Default = Template.bind({});
-Default.args = {
-  label: "Choose your pokemon",
-  name: "pokemon",
-  placeholder: "Insert your text here",
-};
-
-export const Empty = Template.bind({});
-Empty.args = {
-  name: "empty",
-};
+Default.args = {};

@@ -24,7 +24,7 @@ interface ButtonProps {
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  onClick?: (e: any) => void;
   /**
    * Custom Width
    */
@@ -37,6 +37,7 @@ interface ButtonProps {
    * Border Radius
    */
   borderRadius?: "left" | "right" | "top" | "bottom" | "none" | "all";
+  value?: string;
 }
 
 function getBorderRadius(borderRadius: string) {
