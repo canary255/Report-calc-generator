@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { Sprite } from "./Sprite";
+import { Sprite } from ".";
 
 describe("Testing RoundedImage component", () => {
   test("RoundedImage component should be defined", () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Sprite } from "./Sprite";
+import { Sprite } from ".";
 
 export default {
   title: "Atom/Sprite",

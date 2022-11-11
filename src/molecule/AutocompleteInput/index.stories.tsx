@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { SelectorInput } from "./SelectorInput";
+import { SelectorInput } from ".";
 
 export default {
   title: "Molecule/SelectorInput",

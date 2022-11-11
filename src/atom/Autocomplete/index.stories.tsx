@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { AutocompleteInput } from "./AutocompleteInput";
+import { AutocompleteInput } from ".";
 
 export default {
   title: "Atom/Autocomplete",

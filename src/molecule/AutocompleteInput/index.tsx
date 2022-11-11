@@ -1,6 +1,6 @@
 import { FormControl } from "@mui/material";
-import { Label } from "../../atom/Label/Label";
-import { Selector } from "../../atom/Selector/Selector";
+import { Label } from "../../atom/Label";
+import { Selector } from "../../atom/Selector";
 
 type TextinputProps = {
   name: string;

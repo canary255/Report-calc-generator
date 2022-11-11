@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { TypographyComponent } from "./TypographyComponent";
+import { TypographyComponent } from ".";
 
 export default {
   title: "Atom/Typgraphy",

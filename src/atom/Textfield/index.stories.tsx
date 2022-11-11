@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { TextInput } from "./Textinput";
+import { TextFieldComponent } from ".";
 
 export default {
-  title: "Molecule/TextInput",
-  component: TextInput,
+  title: "Atom/Textfield",
+  component: TextFieldComponent,
   argTypes: {},
-} as ComponentMeta<typeof TextInput>;
+} as ComponentMeta<typeof TextFieldComponent>;
 
-const Template: ComponentStory<typeof TextInput> = (args) => (
-  <TextInput {...args} />
+const Template: ComponentStory<typeof TextFieldComponent> = (args) => (
+  <TextFieldComponent {...args} />
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Choose your pokemon",
-  name: "pokemon",
   placeholder: "Insert your text here",
+  name: "pokemon",
 };
 
 export const Empty = Template.bind({});

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { ButtonOption } from "./Button";
+import { ButtonOption } from ".";
 
 describe("Testing Button component", () => {
   test("Button component should be defined", () => {

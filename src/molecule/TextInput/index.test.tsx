@@ -1,13 +1,13 @@
 import { describe, expect, test } from "@jest/globals";
 
-import { AutocompleteInput } from "./AutocompleteInput";
+import { TextInput } from ".";
 
 describe("Testing Selector component", () => {
   test("Selector component should be defined", () => {
-    expect(AutocompleteInput).toBeDefined();
+    expect(TextInput).toBeDefined();
   });
 
   test("Selector component should render correctly", () => {
-    expect(AutocompleteInput).toMatchSnapshot();
+    expect(TextInput).toMatchSnapshot();
   });
 });

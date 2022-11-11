@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Selector } from "./Selector";
+import { Selector } from ".";
 
 export default {
   title: "Atom/Selector",

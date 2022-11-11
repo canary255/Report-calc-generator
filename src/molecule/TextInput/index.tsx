@@ -1,5 +1,5 @@
-import { Label } from "../../atom/Label/Label";
-import { TextFieldComponent } from "../../atom/Textfield/Textfield";
+import { Label } from "../../atom/Label";
+import { TextFieldComponent } from "../../atom/Textfield";
 
 type TextinputProps = {
   name: string;

@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { RoundedImage } from "./RoundedImage";
+import { RoundedImage } from ".";
 
 export default {
   title: "Atom/RoundedImage",
