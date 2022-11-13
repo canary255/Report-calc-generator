@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { ButtonOption } from "../../../atom/Button";
-import { isActivated } from "../isActivated";
+import { isSelected } from "../isSelected";
 
 type WeatherProps = {
   value?: string;
@@ -32,7 +32,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           value={Weather.NONE}
           borderRadius="left"
-          backgroundColor={isActivated(value, Weather.NONE)}
+          backgroundColor={isSelected(value, Weather.NONE)}
         >
           None
         </ButtonOption>
@@ -40,7 +40,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           value={Weather.SUN}
           borderRadius="none"
-          backgroundColor={isActivated(value, Weather.SUN)}
+          backgroundColor={isSelected(value, Weather.SUN)}
         >
           Sun
         </ButtonOption>
@@ -48,7 +48,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           borderRadius="none"
           value={Weather.RAIN}
-          backgroundColor={isActivated(value, Weather.RAIN)}
+          backgroundColor={isSelected(value, Weather.RAIN)}
         >
           Rain
         </ButtonOption>
@@ -56,7 +56,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           value={Weather.SAND}
           borderRadius="none"
-          backgroundColor={isActivated(value, Weather.SAND)}
+          backgroundColor={isSelected(value, Weather.SAND)}
         >
           Sand
         </ButtonOption>
@@ -64,7 +64,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           value={Weather.HAIL}
           borderRadius="right"
-          backgroundColor={isActivated(value, Weather.HAIL)}
+          backgroundColor={isSelected(value, Weather.HAIL)}
         >
           Hail
         </ButtonOption>
@@ -74,7 +74,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           value={Weather.HARSH_SUN}
           borderRadius="left"
-          backgroundColor={isActivated(value, Weather.HARSH_SUN)}
+          backgroundColor={isSelected(value, Weather.HARSH_SUN)}
         >
           Harsh Sun
         </ButtonOption>
@@ -82,7 +82,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           value={Weather.HEAVY_RAIN}
           borderRadius="none"
-          backgroundColor={isActivated(value, Weather.HEAVY_RAIN)}
+          backgroundColor={isSelected(value, Weather.HEAVY_RAIN)}
         >
           Heavy Rain
         </ButtonOption>
@@ -90,7 +90,7 @@ export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
           onClick={onClick}
           borderRadius="right"
           value={Weather.STRONG_WINDS}
-          backgroundColor={isActivated(value, Weather.STRONG_WINDS)}
+          backgroundColor={isSelected(value, Weather.STRONG_WINDS)}
         >
           Strong Winds
         </ButtonOption>

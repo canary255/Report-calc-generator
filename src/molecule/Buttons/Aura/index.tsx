@@ -1,5 +1,5 @@
 import { ButtonOption } from "../../../atom/Button";
-import { isActivated } from "../isActivated";
+import { isSelected } from "../isSelected";
 
 type AuraProps = {
   value?: string;
@@ -20,7 +20,7 @@ export const AuraButton = ({ value = "0", onClick }: AuraProps) => {
         onClick={onClick}
         value={Aura.NONE}
         borderRadius="left"
-        backgroundColor={isActivated(value, Aura.NONE)}
+        backgroundColor={isSelected(value, Aura.NONE)}
       >
         None
       </ButtonOption>
@@ -28,7 +28,7 @@ export const AuraButton = ({ value = "0", onClick }: AuraProps) => {
         onClick={onClick}
         value={Aura.FAIRY}
         borderRadius="none"
-        backgroundColor={isActivated(value, Aura.FAIRY)}
+        backgroundColor={isSelected(value, Aura.FAIRY)}
       >
         Fairy Aura
       </ButtonOption>
@@ -36,7 +36,7 @@ export const AuraButton = ({ value = "0", onClick }: AuraProps) => {
         onClick={onClick}
         borderRadius="none"
         value={Aura.DARK}
-        backgroundColor={isActivated(value, Aura.DARK)}
+        backgroundColor={isSelected(value, Aura.DARK)}
       >
         Dark Aura
       </ButtonOption>
@@ -44,7 +44,7 @@ export const AuraButton = ({ value = "0", onClick }: AuraProps) => {
         onClick={onClick}
         value={Aura.BREAK}
         borderRadius="right"
-        backgroundColor={isActivated(value, Aura.BREAK)}
+        backgroundColor={isSelected(value, Aura.BREAK)}
       >
         Aura Break
       </ButtonOption>

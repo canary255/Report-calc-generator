@@ -1,5 +1,5 @@
 import { ButtonOption } from "../../../atom/Button";
-import { isActivated } from "../isActivated";
+import { isSelected } from "../isSelected";
 
 type TerrainProps = {
   value?: string;
@@ -21,7 +21,7 @@ export const TerrainButton = ({ value = "", onClick }: TerrainProps) => {
         onClick={onClick}
         value={Terrain.NONE}
         borderRadius="left"
-        backgroundColor={isActivated(value, Terrain.NONE)}
+        backgroundColor={isSelected(value, Terrain.NONE)}
       >
         None
       </ButtonOption>
@@ -29,7 +29,7 @@ export const TerrainButton = ({ value = "", onClick }: TerrainProps) => {
         onClick={onClick}
         value={Terrain.ELECTRIC}
         borderRadius="none"
-        backgroundColor={isActivated(value, Terrain.ELECTRIC)}
+        backgroundColor={isSelected(value, Terrain.ELECTRIC)}
       >
         Electric
       </ButtonOption>
@@ -37,7 +37,7 @@ export const TerrainButton = ({ value = "", onClick }: TerrainProps) => {
         onClick={onClick}
         borderRadius="none"
         value={Terrain.GRASSY}
-        backgroundColor={isActivated(value, Terrain.GRASSY)}
+        backgroundColor={isSelected(value, Terrain.GRASSY)}
       >
         Grassy
       </ButtonOption>
@@ -45,7 +45,7 @@ export const TerrainButton = ({ value = "", onClick }: TerrainProps) => {
         onClick={onClick}
         value={Terrain.MISTY}
         borderRadius="none"
-        backgroundColor={isActivated(value, Terrain.MISTY)}
+        backgroundColor={isSelected(value, Terrain.MISTY)}
       >
         Misty
       </ButtonOption>
@@ -53,7 +53,7 @@ export const TerrainButton = ({ value = "", onClick }: TerrainProps) => {
         onClick={onClick}
         value={Terrain.PSYCHIC}
         borderRadius="right"
-        backgroundColor={isActivated(value, Terrain.PSYCHIC)}
+        backgroundColor={isSelected(value, Terrain.PSYCHIC)}
       >
         Psychic
       </ButtonOption>
