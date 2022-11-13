@@ -1,4 +1,5 @@
 import { ButtonOption } from "../../../atom/Button";
+import { isActivated } from "../isActivated";
 
 type SpikeProps = {
   value?: string;
@@ -10,10 +11,6 @@ enum Spikes {
   ONE = "1",
   TWO = "2",
   THREE = "3",
-}
-
-function isActivated(value: string, param: string) {
-  return value === param ? "primary" : "inherit";
 }
 
 export const SpikesButton = ({ value = "0", onClick }: SpikeProps) => {

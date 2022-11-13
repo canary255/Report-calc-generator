@@ -1,61 +1,61 @@
 import { ButtonOption } from "../../../atom/Button";
 import { isActivated } from "../isActivated";
 
-type WeatherProps = {
+type TerrainProps = {
   value?: string;
   onClick: (e: any) => void;
 };
 
-enum Weather {
+enum Terrain {
   NONE = "",
-  SUN = "sun",
-  RAIN = "rain",
-  SAND = "sand",
-  HAIL = "hail",
+  ELECTRIC = "electric",
+  GRASSY = "grassy",
+  MISTY = "misty",
+  PSYCHIC = "psychic",
 }
 
-export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
+export const TerrainButton = ({ value = "", onClick }: TerrainProps) => {
   return (
     <>
       <ButtonOption
         onClick={onClick}
-        value={Weather.NONE}
+        value={Terrain.NONE}
         borderRadius="left"
-        backgroundColor={isActivated(value, Weather.NONE)}
+        backgroundColor={isActivated(value, Terrain.NONE)}
       >
         None
       </ButtonOption>
       <ButtonOption
         onClick={onClick}
-        value={Weather.SUN}
+        value={Terrain.ELECTRIC}
         borderRadius="none"
-        backgroundColor={isActivated(value, Weather.SUN)}
+        backgroundColor={isActivated(value, Terrain.ELECTRIC)}
       >
-        Sun
+        Electric
       </ButtonOption>
       <ButtonOption
         onClick={onClick}
         borderRadius="none"
-        value={Weather.RAIN}
-        backgroundColor={isActivated(value, Weather.RAIN)}
+        value={Terrain.GRASSY}
+        backgroundColor={isActivated(value, Terrain.GRASSY)}
       >
-        Rain
+        Grassy
       </ButtonOption>
       <ButtonOption
         onClick={onClick}
-        value={Weather.SAND}
+        value={Terrain.MISTY}
         borderRadius="none"
-        backgroundColor={isActivated(value, Weather.SAND)}
+        backgroundColor={isActivated(value, Terrain.MISTY)}
       >
-        Sand
+        Misty
       </ButtonOption>
       <ButtonOption
         onClick={onClick}
-        value={Weather.HAIL}
+        value={Terrain.PSYCHIC}
         borderRadius="right"
-        backgroundColor={isActivated(value, Weather.HAIL)}
+        backgroundColor={isActivated(value, Terrain.PSYCHIC)}
       >
-        Hail
+        Psychic
       </ButtonOption>
     </>
   );
