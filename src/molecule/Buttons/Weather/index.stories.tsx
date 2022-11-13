@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { WeatherButton } from ".";
@@ -14,12 +14,7 @@ const Template: ComponentStory<typeof WeatherButton> = (args) => {
   return (
     <WeatherButton
       value={weather}
-      onClick={useCallback(
-        (e) => {
-          setWeather(e.target.value);
-        },
-        [weather]
-      )}
+      onClick={(e) => setWeather(e.target.value)}
     />
   );
 };

@@ -14,12 +14,7 @@ const Template: ComponentStory<typeof TerrainButton> = (args) => {
   return (
     <TerrainButton
       value={terrain}
-      onClick={useCallback(
-        (e) => {
-          setTerrain(e.target.value);
-        },
-        [terrain]
-      )}
+      onClick={(e) => setTerrain(e.target.value)}
     />
   );
 };

@@ -12,15 +12,7 @@ export default {
 const Template: ComponentStory<typeof SpikesButton> = (args) => {
   const [spikes, setSpikes] = useState("0");
   return (
-    <SpikesButton
-      value={spikes}
-      onClick={useCallback(
-        (e) => {
-          setSpikes(e.target.value);
-        },
-        [spikes]
-      )}
-    />
+    <SpikesButton value={spikes} onClick={(e) => setSpikes(e.target.value)} />
   );
 };
 
