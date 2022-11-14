@@ -1,8 +1,9 @@
 import { Box, Paper } from "@mui/material";
 
 type SpriteProps = {
-  src: string;
+  src?: string;
   alt?: string;
+  size?: number;
   backgroundColor?: "red" | "green" | "yellow";
 };
 
@@ -12,10 +13,14 @@ function getColor(backgroundColor: SpriteProps["backgroundColor"]) {
   return "#f14f53";
 }
 
-export const Sprite = ({ src, alt, backgroundColor }: SpriteProps) => {
-  const SIZE = 64;
-  const width = SIZE;
-  const height = SIZE;
+export const Sprite = ({
+  src = "",
+  alt,
+  size = 64,
+  backgroundColor,
+}: SpriteProps) => {
+  const width = size;
+  const height = size;
 
   return (
     <Box
@@ -33,7 +38,9 @@ export const Sprite = ({ src, alt, backgroundColor }: SpriteProps) => {
         sx={{ width, height, backgroundColor: getColor(backgroundColor) }}
         variant="outlined"
       >
-        <img width={width} height={height} src={src} alt={alt} />
+        {src !== "" && (
+          <img width={width} height={height} src={src} alt={alt} />
+        )}
       </Paper>
     </Box>
   );
