@@ -75,7 +75,11 @@ export const Stats = ({ stat }: StatsProps) => {
             </Label>
           </Grid>
           <Grid item xs={2}>
-            <Selector value="0" name="boostAtk" options={boostValues} />
+            <Selector
+              value={stat.boostAtk}
+              name="boostAtk"
+              options={boostValues}
+            />
           </Grid>
         </Grid>
 
@@ -110,7 +114,11 @@ export const Stats = ({ stat }: StatsProps) => {
             </Label>
           </Grid>
           <Grid item xs={2}>
-            <Selector value="0" name="boostSpa" options={boostValues} />
+            <Selector
+              value={stat.boostSpa}
+              name="boostSpa"
+              options={boostValues}
+            />
           </Grid>
         </Grid>
       </Grid>
