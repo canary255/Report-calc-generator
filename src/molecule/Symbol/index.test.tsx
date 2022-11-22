@@ -1,13 +1,15 @@
 import { describe, expect, test } from "@jest/globals";
-
+import { render } from "@testing-library/react";
 import { Symbol } from ".";
 
-describe("Testing Selector component", () => {
-  test("Selector component should be defined", () => {
-    expect(Symbol).toBeDefined();
+describe("Testing Symbol component", () => {
+  const wrapper = render(<Symbol />);
+
+  test("Symbol component should be defined", () => {
+    expect(wrapper).toBeDefined();
   });
 
-  test("Selector component should render correctly", () => {
-    expect(Symbol).toMatchSnapshot();
+  test("Symbol component should render correctly", () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

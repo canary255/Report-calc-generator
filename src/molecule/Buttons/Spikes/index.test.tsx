@@ -1,13 +1,17 @@
 import { describe, expect, test } from "@jest/globals";
-
+import { render } from "@testing-library/react";
 import { SpikesButton } from ".";
 
-describe("Testing Selector component", () => {
-  test("Selector component should be defined", () => {
-    expect(SpikesButton).toBeDefined();
+describe("Testing Spikes Button component", () => {
+  const value = "test";
+  const onClick = () => {};
+  const wrapper = render(<SpikesButton value={value} onClick={onClick} />);
+
+  test("Spikes Button component should be defined", () => {
+    expect(wrapper).toBeDefined();
   });
 
-  test("Selector component should render correctly", () => {
-    expect(SpikesButton).toMatchSnapshot();
+  test("Spikes Button component should render correctly", () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });

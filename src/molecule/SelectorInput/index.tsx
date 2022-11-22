@@ -2,7 +2,7 @@ import { FormControl } from "@mui/material";
 import { Label } from "../../atom/Label";
 import { Selector } from "../../atom/Selector";
 
-type TextinputProps = {
+type SelectorinputProps = {
   name: string;
   label?: string;
   placeholder?: string;
@@ -18,7 +18,7 @@ export const SelectorInput = ({
   options = [],
   value,
   onChange,
-}: TextinputProps) => {
+}: SelectorinputProps) => {
   return (
     <>
       <Label name={name}>{label}</Label>
