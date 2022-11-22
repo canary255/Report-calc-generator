@@ -13,7 +13,7 @@ export const PokemonList = ({ list }: PokemonListProps) => {
     <Grid container spacing={2}>
       {list.map((item, index) => (
         <Grid item key={index} xs={12 / 5}>
-          <Sprite src={item.src} alt="Pokémon" backgroundColor={item.color} />
+          <Sprite src={item?.src} alt="Pokémon" backgroundColor={item?.color} />
         </Grid>
       ))}
     </Grid>

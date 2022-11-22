@@ -1,9 +1,9 @@
 import { describe, expect, test } from "@jest/globals";
 import { render } from "@testing-library/react";
-import { PokemonList } from ".";
+import { PokemonInfo } from ".";
 
 describe("Testing PokemonList component", () => {
-  const wrapper = render(<PokemonList list={[]} />);
+  const wrapper = render(<PokemonInfo list={[]} />);
 
   test("PokemonList component should be defined", () => {
     expect(wrapper).toBeDefined();
