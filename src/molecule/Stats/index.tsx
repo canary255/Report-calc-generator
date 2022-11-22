@@ -9,9 +9,11 @@ type StatsProps = {
     baseAtk: string;
     evAtk: string;
     ivAtk: string;
+    boostAtk: string;
     baseSpa: string;
     evSpa: string;
     ivSpa: string;
+    boostSpa: string;
     nature: string;
   };
   setPokemonStat: (stat: any) => void;
@@ -62,7 +64,14 @@ export const Stats = ({ stat, options = [] }: StatsProps) => {
           </Grid>
           <Grid item xs={2}>
             <Label name="stats">
-              {getStat(stat.baseAtk, stat.evAtk, stat.ivAtk, stat.nature, true)}
+              {getStat(
+                stat.baseAtk,
+                stat.evAtk,
+                stat.ivAtk,
+                stat.boostAtk,
+                stat.nature,
+                true
+              )}
             </Label>
           </Grid>
           <Grid item xs={2}>
@@ -94,6 +103,7 @@ export const Stats = ({ stat, options = [] }: StatsProps) => {
                 stat.baseSpa,
                 stat.evSpa,
                 stat.ivSpa,
+                stat.boostSpa,
                 stat.nature,
                 false
               )}

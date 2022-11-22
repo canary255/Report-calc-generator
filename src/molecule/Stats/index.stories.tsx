@@ -14,9 +14,11 @@ const Template: ComponentStory<typeof Stats> = (args) => {
     baseAtk: "170",
     evAtk: "252",
     ivAtk: "31",
+    boostAtk: "-5",
     baseSpa: "80",
     evSpa: "0",
     ivSpa: "31",
+    boostSpa: "0",
     nature: "Adamant",
   });
   const options = [

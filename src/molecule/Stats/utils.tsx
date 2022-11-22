@@ -1,3 +1,5 @@
+import { getBoost } from "../../domains/gestBoost";
+
 export const getPhysicalNatureMultiplier = (nature: string) => {
   switch (nature) {
     case "Adamant":
@@ -36,6 +38,7 @@ export const getStat = (
   base: string,
   ev: string,
   iv: string,
+  boost: string,
   nature: string,
   isPhysical: boolean
 ) => {
@@ -46,11 +49,13 @@ export const getStat = (
   const baseInt = parseInt(base);
   const evInt = parseInt(ev) <= 252 ? parseInt(ev) : 252;
   const ivInt = parseInt(iv) <= 31 ? parseInt(iv) : 31;
+  const boostMultiplier = getBoost(boost);
   const LEVEL = 50;
 
   const stat = Math.floor(
     (Math.floor(((2 * baseInt + ivInt + evInt / 4) * LEVEL) / 100) + 5) *
-      natureMultiplier
+      natureMultiplier *
+      boostMultiplier
   );
 
   return stat.toString();
