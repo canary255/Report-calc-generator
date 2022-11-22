@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { Label } from "../../atom/Label";
 import { Selector } from "../../atom/Selector";
 import { TextFieldComponent } from "../../atom/Textfield";
+import { boostValues } from "../../domains/boostValues";
 import { getStat } from "./utils";
 
 type StatsProps = {
@@ -16,8 +17,7 @@ type StatsProps = {
     boostSpa: string;
     nature: string;
   };
-  setPokemonStat: (stat: any) => void;
-  options?: { label: string; value: string }[];
+  setPokemonStat?: (stat: any) => void;
 };
 
 const Header = () => {
@@ -39,7 +39,7 @@ const Header = () => {
   );
 };
 
-export const Stats = ({ stat, options = [] }: StatsProps) => {
+export const Stats = ({ stat }: StatsProps) => {
   return (
     <Grid>
       <Grid container item xs={5} direction="row">
@@ -75,7 +75,7 @@ export const Stats = ({ stat, options = [] }: StatsProps) => {
             </Label>
           </Grid>
           <Grid item xs={2}>
-            <Selector name="boostAtk" options={options} />
+            <Selector value="0" name="boostAtk" options={boostValues} />
           </Grid>
         </Grid>
 
@@ -110,7 +110,7 @@ export const Stats = ({ stat, options = [] }: StatsProps) => {
             </Label>
           </Grid>
           <Grid item xs={2}>
-            <Selector name="boostSpa" options={options} />
+            <Selector value="0" name="boostSpa" options={boostValues} />
           </Grid>
         </Grid>
       </Grid>

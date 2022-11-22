@@ -1,4 +1,4 @@
-import { getBoost } from "../../domains/gestBoost";
+import { getBoost } from "../../domains/getBoost";
 
 export const getPhysicalNatureMultiplier = (nature: string) => {
   switch (nature) {

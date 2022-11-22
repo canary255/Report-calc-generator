@@ -1,6 +1,6 @@
 import { describe, expect, test } from "@jest/globals";
 
-import { SymbolProps } from ".";
+import { Symbol } from ".";
 
 describe("Testing Selector component", () => {
   test("Selector component should be defined", () => {
