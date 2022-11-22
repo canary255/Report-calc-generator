@@ -1,12 +1,24 @@
 import { describe, expect, test } from "@jest/globals";
+import { render } from "@testing-library/react";
+
 import { Sprite } from ".";
 
-describe("Testing RoundedImage component", () => {
-  test("RoundedImage component should be defined", () => {
-    expect(Sprite).toBeDefined();
+describe("Testing Sprite component", () => {
+  const src =
+    "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
+  const alt = "Google Logo";
+  const wrapper = render(<Sprite src={src} alt={alt} />);
+  const noImage = render(<Sprite />);
+
+  test("Sprite component should be defined", () => {
+    expect(wrapper).toBeDefined();
   });
 
-  test("RoundedImage component should render correctly", () => {
-    expect(Sprite).toMatchSnapshot();
+  test("Sprite component should render correctly", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test("Sprite component should render correctly without image", () => {
+    expect(noImage).toMatchSnapshot();
   });
 });

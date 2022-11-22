@@ -1,13 +1,18 @@
 import { describe, expect, test } from "@jest/globals";
+import { render } from "@testing-library/react";
 
 import { TextFieldComponent } from ".";
 
-describe("Testing Selector component", () => {
-  test("Selector component should be defined", () => {
-    expect(TextFieldComponent).toBeDefined();
+describe("Testing TextFieldComponent component", () => {
+  const name = "test";
+  const value = "test";
+  const wrapper = render(<TextFieldComponent value={value} name={name} />);
+
+  test("TextFieldComponent component should be defined", () => {
+    expect(wrapper).toBeDefined();
   });
 
-  test("Selector component should render correctly", () => {
-    expect(TextFieldComponent).toMatchSnapshot();
+  test("TextFieldComponent component should render correctly", () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });
