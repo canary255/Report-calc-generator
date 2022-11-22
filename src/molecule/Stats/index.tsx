@@ -3,7 +3,7 @@ import { Label } from "../../atom/Label";
 import { Selector } from "../../atom/Selector";
 import { TextFieldComponent } from "../../atom/Textfield";
 import { boostValues } from "../../domains/boostValues";
-import { getStat } from "./utils";
+import { getStat } from "./utils/index";
 
 type StatsProps = {
   stat: {

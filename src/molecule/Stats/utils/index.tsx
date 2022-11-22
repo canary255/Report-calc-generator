@@ -1,16 +1,33 @@
-import { getBoost } from "../../domains/getBoost";
+import { getBoost } from "../../../domains/getBoost";
+
+enum NatureNames {
+  ADAMANT = "adamant",
+  BRAVE = "brave",
+  NAUGHTY = "naughty",
+  LONELY = "lonely",
+  BOLD = "bold",
+  TIMID = "timid",
+  MODEST = "modest",
+  CALM = "calm",
+  MILD = "mild",
+  RASH = "rash",
+  QUIET = "quiet",
+  IMPISH = "impish",
+  JOLLY = "jolly",
+  CAREFUL = "careful",
+}
 
 export const getPhysicalNatureMultiplier = (nature: string) => {
-  switch (nature) {
-    case "Adamant":
-    case "Brave":
-    case "Naughty":
-    case "Lonely":
+  switch (nature.toLowerCase()) {
+    case NatureNames.ADAMANT:
+    case NatureNames.BRAVE:
+    case NatureNames.NAUGHTY:
+    case NatureNames.LONELY:
       return 1.1;
-    case "Bold":
-    case "Timid":
-    case "Modest":
-    case "Calm":
+    case NatureNames.BOLD:
+    case NatureNames.TIMID:
+    case NatureNames.MODEST:
+    case NatureNames.CALM:
       return 0.9;
     default:
       return 1;
@@ -18,16 +35,16 @@ export const getPhysicalNatureMultiplier = (nature: string) => {
 };
 
 export const getSpecialNatureMultiplier = (nature: string) => {
-  switch (nature) {
-    case "Modest":
-    case "Quiet":
-    case "Mild":
-    case "Rash":
+  switch (nature.toLowerCase()) {
+    case NatureNames.MODEST:
+    case NatureNames.QUIET:
+    case NatureNames.MILD:
+    case NatureNames.RASH:
       return 1.1;
-    case "Jolly":
-    case "Adamant":
-    case "Impish":
-    case "Careful":
+    case NatureNames.JOLLY:
+    case NatureNames.ADAMANT:
+    case NatureNames.IMPISH:
+    case NatureNames.CAREFUL:
       return 0.9;
     default:
       return 1;
