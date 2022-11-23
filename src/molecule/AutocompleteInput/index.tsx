@@ -1,15 +1,7 @@
 import { FormControl } from "@mui/material";
 import { AutocompleteInput } from "../../atom/Autocomplete";
 import { Label } from "../../atom/Label";
-
-type TextinputProps = {
-  name: string;
-  label?: string;
-  placeholder?: string;
-  options?: { label: string; value: string }[];
-  value?: string;
-  onChange?: (e: any) => void;
-};
+import { AutoCompleteInputProps } from "../../models/molecule/autocompleteInput.model";
 
 export const AutocompleteField = ({
   label = "",
@@ -17,7 +9,7 @@ export const AutocompleteField = ({
   placeholder = "",
   options = [],
   onChange,
-}: TextinputProps) => {
+}: AutoCompleteInputProps) => {
   return (
     <>
       <Label name={name}>{label}</Label>

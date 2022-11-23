@@ -1,11 +1,7 @@
 import { Grid } from "@mui/material";
 import { Sprite } from "../../atom/Sprite";
 import { TypographyComponent } from "../../atom/Typography";
-
-type SymbolProps = {
-  color: "red" | "green" | "yellow";
-  children: string;
-};
+import { SymbolProps } from "../../models/molecule/symbol.model";
 
 const TextContain = ({ color, children }: SymbolProps) => {
   return (

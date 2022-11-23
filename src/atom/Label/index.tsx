@@ -1,9 +1,5 @@
 import { InputLabel } from "@mui/material";
-
-type LabelProps = {
-  children: string;
-  name: string;
-};
+import { LabelProps } from "../../models/atom/label.model";
 
 export const Label = ({ children, name }: LabelProps) => {
   return <InputLabel id={name}>{children}</InputLabel>;

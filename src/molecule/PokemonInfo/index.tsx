@@ -2,38 +2,10 @@ import { Grid } from "@mui/material";
 import { Sprite } from "../../atom/Sprite";
 import { TypographyComponent } from "../../atom/Typography";
 import { getColor } from "../../domains/getColor";
-
-type PokemonInfoProps = {
-  pokemon: {
-    src: string;
-    color: "red" | "green" | "yellow" | undefined;
-    name: string;
-    standard: {
-      set: string;
-      message: string;
-      color: "red" | "green" | "yellow" | undefined;
-    };
-    extreme: {
-      set: string;
-      message: string;
-      color: "red" | "green" | "yellow" | undefined;
-    };
-    optimal: {
-      set: string;
-      message: string;
-      color: "red" | "green" | "yellow" | undefined;
-    };
-  };
-};
-
-type ShowInfoProps = {
-  pokemon: {
-    set: string;
-    message: string;
-    color: "red" | "green" | "yellow" | undefined;
-  };
-  type: "standard" | "extreme" | "optimal";
-};
+import {
+  PokemonInfoProps,
+  ShowInfoProps,
+} from "../../models/molecule/pokemonInfo.model";
 
 const ShowPokemonInfo = ({ pokemon, type }: ShowInfoProps) => {
   return (

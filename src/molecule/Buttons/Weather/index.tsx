@@ -1,22 +1,7 @@
 import { Grid } from "@mui/material";
 import { ButtonOption } from "../../../atom/Button";
+import { Weather, WeatherProps } from "../../../models/molecule/weather.model";
 import { isSelected } from "../isSelected";
-
-type WeatherProps = {
-  value?: string;
-  onClick: (e: any) => void;
-};
-
-enum Weather {
-  NONE = "",
-  SUN = "sun",
-  RAIN = "rain",
-  SAND = "sand",
-  HAIL = "hail",
-  HARSH_SUN = "harsh_sun",
-  HEAVY_RAIN = "heavy_rain",
-  STRONG_WINDS = "strong_winds",
-}
 
 export const WeatherButton = ({ value = "", onClick }: WeatherProps) => {
   return (

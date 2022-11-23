@@ -1,12 +1,5 @@
 import { MenuItem, Select } from "@mui/material";
-
-type SelectorProps = {
-  label?: string;
-  name: string;
-  value?: string;
-  options?: { label: string; value: string }[];
-  onChange?: (e: any) => void;
-};
+import { SelectorProps } from "../../models/atom/selector.model";
 
 export const Selector = ({
   label = "",

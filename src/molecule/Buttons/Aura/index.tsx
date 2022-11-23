@@ -1,17 +1,6 @@
 import { ButtonOption } from "../../../atom/Button";
+import { Aura, AuraProps } from "../../../models/molecule/aura.model";
 import { isSelected } from "../isSelected";
-
-type AuraProps = {
-  value?: string;
-  onClick: (e: any) => void;
-};
-
-enum Aura {
-  NONE = "",
-  FAIRY = "fairy",
-  DARK = "dark",
-  BREAK = "break",
-}
 
 export const AuraButton = ({ value = "0", onClick }: AuraProps) => {
   return (

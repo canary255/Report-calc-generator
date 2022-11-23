@@ -1,13 +1,6 @@
 import { Label } from "../../atom/Label";
 import { TextFieldComponent } from "../../atom/Textfield";
-
-type TextinputProps = {
-  name: string;
-  label?: string;
-  placeholder?: string;
-  value?: string;
-  onChange?: (e: any) => void;
-};
+import { TextinputProps } from "../../models/molecule/textInput.model";
 
 export const TextInput = ({
   label = "",

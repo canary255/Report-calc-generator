@@ -1,12 +1,5 @@
-import { Avatar, Box, Button } from "@mui/material";
-
-type RoundedImageProps = {
-  src: string;
-  alt?: string;
-  size?: number;
-  backgroundColor?: string;
-  border?: number;
-};
+import { Avatar } from "@mui/material";
+import { RoundedImageProps } from "../../models/atom/roundedImage.model";
 
 export const RoundedImage = ({
   src,

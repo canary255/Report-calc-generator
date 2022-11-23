@@ -1,12 +1,6 @@
 import { Box, Paper } from "@mui/material";
 import { getColor } from "../../domains/getColor";
-
-type SpriteProps = {
-  src?: string;
-  alt?: string;
-  size?: number;
-  backgroundColor?: "red" | "green" | "yellow";
-};
+import { SpriteProps } from "../../models/atom/sprite.model";
 
 export const Sprite = ({
   src = "",

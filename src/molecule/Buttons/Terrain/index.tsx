@@ -1,18 +1,6 @@
 import { ButtonOption } from "../../../atom/Button";
+import { Terrain, TerrainProps } from "../../../models/molecule/terrain.model";
 import { isSelected } from "../isSelected";
-
-type TerrainProps = {
-  value?: string;
-  onClick: (e: any) => void;
-};
-
-enum Terrain {
-  NONE = "",
-  ELECTRIC = "electric",
-  GRASSY = "grassy",
-  MISTY = "misty",
-  PSYCHIC = "psychic",
-}
 
 export const TerrainButton = ({ value = "", onClick }: TerrainProps) => {
   return (

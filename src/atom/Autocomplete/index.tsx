@@ -1,11 +1,5 @@
 import { Autocomplete, TextField } from "@mui/material";
-
-type AutocompleteProps = {
-  name: string;
-  options: { label: string }[];
-  label?: string;
-  onChange?: (e: any) => void;
-};
+import { AutocompleteProps } from "../../models/atom/autoComplete.model";
 
 export const AutocompleteInput = ({
   label = "",

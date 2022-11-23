@@ -1,12 +1,6 @@
 import { Grid } from "@mui/material";
 import { Sprite } from "../../atom/Sprite";
-
-type PokemonListProps = {
-  list: {
-    src: string;
-    color: "red" | "green" | "yellow" | undefined;
-  }[];
-};
+import { PokemonListProps } from "../../models/molecule/pokemonList.model";
 
 export const PokemonList = ({ list }: PokemonListProps) => {
   return (

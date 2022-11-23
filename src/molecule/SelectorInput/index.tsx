@@ -1,15 +1,7 @@
 import { FormControl } from "@mui/material";
 import { Label } from "../../atom/Label";
 import { Selector } from "../../atom/Selector";
-
-type SelectorinputProps = {
-  name: string;
-  label?: string;
-  placeholder?: string;
-  options?: { label: string; value: string }[];
-  value?: string;
-  onChange?: (e: any) => void;
-};
+import { SelectorinputProps } from "../../models/molecule/selectorInput.model";
 
 export const SelectorInput = ({
   label = "",
