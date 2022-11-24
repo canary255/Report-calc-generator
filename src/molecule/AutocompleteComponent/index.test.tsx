@@ -1,7 +1,7 @@
 import { describe, expect, test } from "@jest/globals";
 import { render } from "@testing-library/react";
 
-import { AutocompleteField } from ".";
+import { AutocompleteComponent } from ".";
 
 describe("Testing AutoCompleteInput component", () => {
   const name = "test";
@@ -11,7 +11,7 @@ describe("Testing AutoCompleteInput component", () => {
     { value: "1", label: "1" },
   ];
   const wrapper = render(
-    <AutocompleteField
+    <AutocompleteComponent
       value={value}
       name={name}
       options={options}

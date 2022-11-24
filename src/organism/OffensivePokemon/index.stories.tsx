@@ -1,26 +1,16 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { TextInput } from ".";
+import { OffensivePokemon } from ".";
 
 export default {
-  title: "Molecule/TextInput",
-  component: TextInput,
+  title: "Organism/OffensivePokemon",
+  component: OffensivePokemon,
   argTypes: {},
-} as ComponentMeta<typeof TextInput>;
+} as ComponentMeta<typeof OffensivePokemon>;
 
-const Template: ComponentStory<typeof TextInput> = (args) => (
-  <TextInput {...args} />
+const Template: ComponentStory<typeof OffensivePokemon> = (args) => (
+  <OffensivePokemon />
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  label: "Choose your pokemon",
-  name: "pokemon",
-  placeholder: "Insert your text here",
-};
-
-export const Empty = Template.bind({});
-Empty.args = {
-  name: "empty",
-};

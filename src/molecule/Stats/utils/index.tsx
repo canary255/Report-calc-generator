@@ -18,7 +18,7 @@ enum NatureNames {
 }
 
 export const getPhysicalNatureMultiplier = (nature: string) => {
-  switch (nature.toLowerCase()) {
+  switch (nature?.toLowerCase()) {
     case NatureNames.ADAMANT:
     case NatureNames.BRAVE:
     case NatureNames.NAUGHTY:
@@ -35,7 +35,7 @@ export const getPhysicalNatureMultiplier = (nature: string) => {
 };
 
 export const getSpecialNatureMultiplier = (nature: string) => {
-  switch (nature.toLowerCase()) {
+  switch (nature?.toLowerCase()) {
     case NatureNames.MODEST:
     case NatureNames.QUIET:
     case NatureNames.MILD:

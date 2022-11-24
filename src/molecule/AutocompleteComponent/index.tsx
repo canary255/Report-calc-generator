@@ -3,7 +3,7 @@ import { AutocompleteInput } from "../../atom/Autocomplete";
 import { Label } from "../../atom/Label";
 import { AutoCompleteInputProps } from "../../models/molecule/autocompleteInput.model";
 
-export const AutocompleteField = ({
+export const AutocompleteComponent = ({
   label = "",
   name,
   placeholder = "",

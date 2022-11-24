@@ -1,11 +1,9 @@
 import { describe, expect, test } from "@jest/globals";
 import { render } from "@testing-library/react";
-import { TextInput } from ".";
+import { OffensivePokemon } from ".";
 
 describe("Testing TextInput component", () => {
-  const name = "test";
-  const value = "test";
-  const wrapper = render(<TextInput value={value} name={name} />);
+  const wrapper = render(<OffensivePokemon />);
 
   test("TextInput component should be defined", () => {
     expect(wrapper).toBeDefined();

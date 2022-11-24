@@ -27,7 +27,7 @@ const Header = () => {
 
 export const Stats = ({ stat }: StatsProps) => {
   return (
-    <Grid>
+    <>
       <Grid container item xs={5} direction="row">
         <Header />
         <Grid container spacing={2} alignItems="center">
@@ -36,33 +36,33 @@ export const Stats = ({ stat }: StatsProps) => {
           </Grid>
           <Grid item xs={2}>
             <TextFieldComponent
-              value={stat.baseAtk}
+              value={stat?.baseAtk}
               name="baseAtk"
               readOnly
               fullWidth
             />
           </Grid>
           <Grid item xs={2}>
-            <TextFieldComponent value={stat.ivAtk} name="ivAtk" fullWidth />
+            <TextFieldComponent value={stat?.ivAtk} name="ivAtk" fullWidth />
           </Grid>
           <Grid item xs={2}>
-            <TextFieldComponent value={stat.evAtk} name="evAtk" fullWidth />
+            <TextFieldComponent value={stat?.evAtk} name="evAtk" fullWidth />
           </Grid>
           <Grid item xs={2}>
             <Label name="stats">
               {getStat(
-                stat.baseAtk,
-                stat.evAtk,
-                stat.ivAtk,
-                stat.boostAtk,
-                stat.nature,
+                stat?.baseAtk,
+                stat?.evAtk,
+                stat?.ivAtk,
+                stat?.boostAtk,
+                stat?.nature,
                 true
               )}
             </Label>
           </Grid>
           <Grid item xs={2}>
             <Selector
-              value={stat.boostAtk}
+              value={stat?.boostAtk}
               name="boostAtk"
               options={boostValues}
             />
@@ -75,39 +75,39 @@ export const Stats = ({ stat }: StatsProps) => {
           </Grid>
           <Grid item xs={2}>
             <TextFieldComponent
-              value={stat.baseSpa}
+              value={stat?.baseSpa}
               name="baseSpa"
               readOnly
               fullWidth
             />
           </Grid>
           <Grid item xs={2}>
-            <TextFieldComponent value={stat.ivSpa} name="ivSpa" fullWidth />
+            <TextFieldComponent value={stat?.ivSpa} name="ivSpa" fullWidth />
           </Grid>
           <Grid item xs={2}>
-            <TextFieldComponent value={stat.evSpa} name="evSpa" fullWidth />
+            <TextFieldComponent value={stat?.evSpa} name="evSpa" fullWidth />
           </Grid>
           <Grid item xs={2}>
             <Label name="statsSpa">
               {getStat(
-                stat.baseSpa,
-                stat.evSpa,
-                stat.ivSpa,
-                stat.boostSpa,
-                stat.nature,
+                stat?.baseSpa,
+                stat?.evSpa,
+                stat?.ivSpa,
+                stat?.boostSpa,
+                stat?.nature,
                 false
               )}
             </Label>
           </Grid>
           <Grid item xs={2}>
             <Selector
-              value={stat.boostSpa}
+              value={stat?.boostSpa}
               name="boostSpa"
               options={boostValues}
             />
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
