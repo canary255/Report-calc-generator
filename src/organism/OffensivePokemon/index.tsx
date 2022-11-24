@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { ButtonOption } from "../../atom/Button";
+import { DividerComponent } from "../../atom/Divider";
 import { RoundedImage } from "../../atom/RoundedImage";
 import { AutocompleteComponent } from "../../molecule/AutocompleteComponent";
 import { SelectorInput } from "../../molecule/SelectorInput";
@@ -45,6 +46,10 @@ export const OffensivePokemon = () => {
       </Grid>
       <Grid item xs={8}>
         <SelectorInput name="nature" placeholder="Nature" />
+      </Grid>
+
+      <Grid item xs={12}>
+        <DividerComponent />
       </Grid>
       <Grid item xs={12}>
         <Stats stat={{}} />
