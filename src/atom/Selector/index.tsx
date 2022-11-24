@@ -6,6 +6,7 @@ export const Selector = ({
   name,
   value,
   options = [],
+  fullWidth = false,
   onChange,
 }: SelectorProps) => {
   return (
@@ -15,10 +16,8 @@ export const Selector = ({
       labelId={name}
       label={label}
       onChange={onChange}
+      fullWidth={fullWidth}
     >
-      <MenuItem value="">
-        <em>None</em>
-      </MenuItem>
       {options.map((option, i) => (
         <MenuItem key={i} value={option.value}>
           {option.label}

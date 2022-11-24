@@ -11,10 +11,10 @@ export default {
 
 const Template: ComponentStory<typeof Stats> = (args) => {
   const [pokemonStat, setPokemonStat] = useState({
-    baseAtk: "170",
+    baseAtk: "185",
     evAtk: "252",
     ivAtk: "31",
-    boostAtk: "-5",
+    boostAtk: "6",
     baseSpa: "80",
     evSpa: "0",
     ivSpa: "31",

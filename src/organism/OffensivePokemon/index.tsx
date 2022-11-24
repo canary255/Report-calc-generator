@@ -43,9 +43,11 @@ export const OffensivePokemon = () => {
           <ButtonOption backgroundColor="inherit">Terastal</ButtonOption>
         </Grid>
       </Grid>
-
-      <Grid container direction="column" justifyContent="center" item xs={12}>
-        <Stats />
+      <Grid item xs={8}>
+        <SelectorInput name="nature" placeholder="Nature" />
+      </Grid>
+      <Grid item xs={12}>
+        <Stats stat={{}} />
       </Grid>
     </Grid>
   );
