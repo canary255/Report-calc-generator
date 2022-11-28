@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import { Label } from "../../atom/Label";
-import { Selector } from "../../atom/Selector";
 import { TextFieldComponent } from "../../atom/Textfield";
 import { boostValues } from "../../domains/boostValues";
 import { StatsProps } from "../../models/molecule/stats.model";
@@ -69,7 +68,7 @@ export const Stats = ({ stat }: StatsProps) => {
         item
         xs={12}
       >
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <SelectorInput
             value={stat?.boostAtk}
             placeholder="Boost"
@@ -109,15 +108,8 @@ export const Stats = ({ stat }: StatsProps) => {
             )}
           </Label>
         </Grid>
-        <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          sx={{ mb: 2, mt: 2 }}
-          item
-          xs={12}
-        >
-          <Grid item xs={8}>
+        <Grid container direction="row" justifyContent="center" item xs={12}>
+          <Grid item xs={7}>
             <SelectorInput
               value={stat?.boostSpa}
               name="boostSpa"

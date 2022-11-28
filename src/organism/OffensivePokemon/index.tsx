@@ -2,11 +2,16 @@ import { Grid } from "@mui/material";
 import { ButtonOption } from "../../atom/Button";
 import { DividerComponent } from "../../atom/Divider";
 import { RoundedImage } from "../../atom/RoundedImage";
+import { StatsProps } from "../../models/molecule/stats.model";
 import { AutocompleteComponent } from "../../molecule/AutocompleteComponent";
 import { SelectorInput } from "../../molecule/SelectorInput";
 import { Stats } from "../../molecule/Stats";
 
-export const OffensivePokemon = () => {
+type OffensivePokemonProps = {
+  offensive: StatsProps;
+};
+
+export const OffensivePokemon = ({ offensive }: OffensivePokemonProps) => {
   return (
     <Grid container spacing={2} direction="row" justifyContent="center">
       <Grid container item xs={12} direction="column" alignItems="center">
@@ -52,7 +57,7 @@ export const OffensivePokemon = () => {
         <DividerComponent />
       </Grid>
       <Grid item xs={12}>
-        <Stats stat={{}} />
+        <Stats stat={offensive.stat} />
       </Grid>
     </Grid>
   );
