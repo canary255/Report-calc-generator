@@ -3,15 +3,15 @@ import { render } from "@testing-library/react";
 
 import { DividerComponent } from ".";
 
-describe("Testing Button component", () => {
+describe("Testing Divider component", () => {
   const name = "test";
-  const wrapper = render(<DividerComponent>{name}</DividerComponent>);
+  const wrapper = render(<DividerComponent />);
 
-  test("Button component should be defined", () => {
+  test("Divider component should be defined", () => {
     expect(wrapper).toBeDefined();
   });
 
-  test("Button component should render correctly", () => {
+  test("Divider component should render correctly", () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
