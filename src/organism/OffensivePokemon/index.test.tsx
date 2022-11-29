@@ -16,14 +16,14 @@ const offensive = {
   },
 };
 
-describe("Testing TextInput component", () => {
+describe("Testing OffensivePokemon component", () => {
   const wrapper = render(<OffensivePokemon offensive={offensive} />);
 
-  test("TextInput component should be defined", () => {
+  test("OffensivePokemon component should be defined", () => {
     expect(wrapper).toBeDefined();
   });
 
-  test("TextInput component should render correctly", () => {
+  test("OffensivePokemon component should render correctly", () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

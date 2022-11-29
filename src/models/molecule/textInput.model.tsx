@@ -3,5 +3,6 @@ export type TextinputProps = {
   label?: string;
   placeholder?: string;
   value?: string;
+  fullWidth?: boolean;
   onChange?: (e: any) => void;
 };

@@ -4,5 +4,6 @@ export type SelectorinputProps = {
   placeholder?: string;
   options?: { label: string; value: string }[];
   value?: string;
+  fullWidth?: boolean;
   onChange?: (e: any) => void;
 };

@@ -9,6 +9,7 @@ export const SelectorInput = ({
   placeholder = "",
   options = [],
   value,
+  fullWidth = false,
   onChange,
 }: SelectorinputProps) => {
   return (
@@ -22,6 +23,7 @@ export const SelectorInput = ({
           options={options}
           value={value}
           onChange={onChange}
+          fullWidth={fullWidth}
         />
       </FormControl>
     </>

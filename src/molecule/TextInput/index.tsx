@@ -7,6 +7,7 @@ export const TextInput = ({
   placeholder,
   name,
   value,
+  fullWidth = false,
   onChange,
 }: TextinputProps) => {
   return (
@@ -17,6 +18,7 @@ export const TextInput = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        fullWidth={fullWidth}
       />
     </>
   );
