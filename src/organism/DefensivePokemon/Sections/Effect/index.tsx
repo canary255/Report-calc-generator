@@ -5,7 +5,7 @@ import { SpikesButton } from "../../../../molecule/Buttons/Spikes";
 
 export const EffectComponent = () => {
   return (
-    <>
+    <Grid container spacing={3} direction="row" sx={{ mt: 2 }}>
       <Grid item xs={4} container justifyContent="center">
         <ButtonOption>Protect</ButtonOption>
       </Grid>
@@ -39,6 +39,6 @@ export const EffectComponent = () => {
       <Grid item xs={6} container justifyContent="center">
         <ButtonOption>Friend Guard</ButtonOption>
       </Grid>
-    </>
+    </Grid>
   );
 };

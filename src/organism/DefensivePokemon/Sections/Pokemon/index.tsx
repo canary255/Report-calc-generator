@@ -7,7 +7,7 @@ import { TextInput } from "../../../../molecule/TextInput";
 
 export const DefensivePokemonSection = () => {
   return (
-    <>
+    <Grid container sx={{ mb: 4 }} spacing={3}>
       <Grid item xs={6} container justifyContent="center">
         <ButtonOption>All Pokemon</ButtonOption>
       </Grid>
@@ -35,6 +35,6 @@ export const DefensivePokemonSection = () => {
       <Grid container justifyContent="center">
         <TargetButton onClick={() => {}} />
       </Grid>
-    </>
+    </Grid>
   );
 };
