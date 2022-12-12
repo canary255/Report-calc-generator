@@ -11,30 +11,19 @@ export default {
 
 const list = [
   {
-    src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    color: "red" as const,
-  },
-  {
-    src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    color: "yellow" as const,
-  },
-  {
-    src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    color: "red" as const,
-  },
-  {
-    src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    color: "green" as const,
-  },
-  {
-    src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    color: "yellow" as const,
-  },
-  {
+    name: "bulbasaur",
     src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     color: "green" as const,
   },
 ];
+
+for (let i = 1; i < 1050; i++) {
+  list.push({
+    name: "bulbasaur",
+    src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    color: "green" as const,
+  });
+}
 
 const Template: ComponentStory<typeof PokemonList> = (args) => (
   <PokemonList {...args} />

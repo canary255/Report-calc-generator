@@ -11,13 +11,15 @@ export default {
 
 const list = [
   {
+    name: "bulbasaur",
     src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     color: "green" as const,
   },
 ];
 
-for (let i = 1; i < 50; i++) {
+for (let i = 1; i < 1050; i++) {
   list.push({
+    name: "bulbasaur",
     src: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     color: "green" as const,
   });

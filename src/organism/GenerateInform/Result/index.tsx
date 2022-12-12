@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Divider, Grid } from "@mui/material";
+import { Box, Divider, Grid } from "@mui/material";
 import { TypographyComponent } from "../../../atom/Typography";
 import { ButtonOption } from "../../../atom/Button";
 import { Symbol } from "../../../molecule/Symbol";
@@ -14,7 +14,18 @@ export const Result = ({ list }: ResultProps) => {
         <Symbol />
         <DividerComponent />
       </Grid>
-      <Grid item xs={12} sm={6} sx={{ scrollBehavior: "smooth" }}>
+      <Grid
+        container
+        direction="row"
+        item
+        xs={12}
+        sx={{
+          maxHeight: "255px",
+          maxWidth: "100%",
+          overflowX: "hidden",
+          overflowY: "auto",
+        }}
+      >
         <PokemonList list={list} />
         <DividerComponent />
       </Grid>
