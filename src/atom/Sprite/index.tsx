@@ -5,7 +5,7 @@ import { SpriteProps } from "../../models/atom/sprite.model";
 export const Sprite = ({
   src = "",
   alt,
-  size = 64,
+  size = 40,
   backgroundColor,
 }: SpriteProps) => {
   const width = size;
@@ -17,7 +17,6 @@ export const Sprite = ({
         display: "flex",
         flexWrap: "wrap",
         "& > :not(style)": {
-          m: 1,
           width,
           height,
         },
