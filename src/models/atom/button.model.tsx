@@ -36,4 +36,5 @@ export interface ButtonProps {
    */
   borderRadius?: "left" | "right" | "top" | "bottom" | "none" | "all";
   value?: string;
+  fontSize?: number;
 }

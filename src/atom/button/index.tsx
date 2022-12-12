@@ -30,12 +30,14 @@ export const ButtonOption = ({
   height,
   width,
   borderRadius,
+  fontSize,
   ...props
 }: ButtonProps) => {
   const custom = {
     height: height,
     width: width,
     borderRadius: borderRadius ? getBorderRadius(borderRadius) : "",
+    fontSize,
   };
   return (
     <Button

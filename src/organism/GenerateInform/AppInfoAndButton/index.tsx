@@ -64,7 +64,7 @@ export const AppInfoAndButton = () => {
         sm={6}
         sx={{ marginTop: "25%" }}
       >
-        <ButtonOption width={256} height={128} borderRadius="all">
+        <ButtonOption fontSize={24} width={256} height={128} borderRadius="all">
           Generate report
         </ButtonOption>
       </Grid>
