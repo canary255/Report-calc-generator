@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { EffectComponent } from ".";
+import { Loading } from ".";
 
 export default {
-  title: "Organism/DefensivePokemon/Effect",
-  component: EffectComponent,
+  title: "Organism/GenerateInfo/Loading",
+  component: Loading,
   argTypes: {},
-} as ComponentMeta<typeof EffectComponent>;
+} as ComponentMeta<typeof Loading>;
 
-const Template: ComponentStory<typeof EffectComponent> = (args) => (
-  <EffectComponent />
-);
+const Template: ComponentStory<typeof Loading> = (args) => <Loading />;
 
 export const Default = Template.bind({});
 Default.args = {};

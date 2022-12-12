@@ -1,43 +1,27 @@
 import React, { useState } from "react";
 import { Grid } from "@mui/material";
-import { ButtonOption } from "../../../../atom/Button";
-import { SpikesButton } from "../../../../molecule/Buttons/Spikes";
+import { TypographyComponent } from "../../../atom/Typography";
+import { ButtonOption } from "../../../atom/Button";
 
-export const EffectComponent = () => {
+export const Loading = () => {
   return (
-    <Grid container spacing={3} direction="row" sx={{ mt: 2 }}>
-      <Grid item xs={4} container justifyContent="center">
-        <ButtonOption>Protect</ButtonOption>
+    <Grid container spacing={3} direction="column" alignItems="center">
+      <Grid item xs={12} sm={6}>
+        <TypographyComponent variant="h2">Loading...</TypographyComponent>
       </Grid>
-      <Grid item xs={4} container justifyContent="center">
-        <ButtonOption>Stealth Rock</ButtonOption>
-      </Grid>
-      <Grid item xs={4} container justifyContent="center">
-        <ButtonOption>Foresight</ButtonOption>
-      </Grid>
-      <Grid item xs={12} container justifyContent="center">
-        <SpikesButton onClick={() => {}} />
-      </Grid>
-      <Grid item xs={4} container justifyContent="center">
-        <ButtonOption>Helping Hand</ButtonOption>
-      </Grid>
-      <Grid item xs={4} container justifyContent="center">
-        <ButtonOption>Tailwind</ButtonOption>
-      </Grid>
-      <Grid item xs={4} container justifyContent="center">
-        <ButtonOption>Battery</ButtonOption>
-      </Grid>
-      <Grid item xs={6} container justifyContent="center">
-        <ButtonOption>Reflect</ButtonOption>
-      </Grid>
-      <Grid item xs={6} container justifyContent="center">
-        <ButtonOption>Light Screen</ButtonOption>
-      </Grid>
-      <Grid item xs={6} container justifyContent="center">
-        <ButtonOption>Aurora Veil</ButtonOption>
-      </Grid>
-      <Grid item xs={6} container justifyContent="center">
-        <ButtonOption>Friend Guard</ButtonOption>
+
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        item
+        xs={12}
+        sm={6}
+        sx={{ marginTop: "25%" }}
+      >
+        <ButtonOption fontSize={24} width={256} height={128} borderRadius="all">
+          Cancel
+        </ButtonOption>
       </Grid>
     </Grid>
   );
