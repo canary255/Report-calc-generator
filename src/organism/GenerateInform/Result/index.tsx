@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Box, Divider, Grid } from "@mui/material";
-import { TypographyComponent } from "../../../atom/Typography";
+import { Grid } from "@mui/material";
 import { ButtonOption } from "../../../atom/Button";
 import { Symbol } from "../../../molecule/Symbol";
 import { DividerComponent } from "../../../atom/Divider";

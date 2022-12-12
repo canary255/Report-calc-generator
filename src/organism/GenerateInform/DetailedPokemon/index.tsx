@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { Box, Divider, Grid } from "@mui/material";
-import { TypographyComponent } from "../../../atom/Typography";
+import { Box, Grid } from "@mui/material";
 import { ButtonOption } from "../../../atom/Button";
 import { Symbol } from "../../../molecule/Symbol";
 import { DividerComponent } from "../../../atom/Divider";
-import { PokemonList } from "../../../molecule/PokemonList";
-import { ResultProps } from "../../../models/organism/result.model";
 import { PokemonInfo } from "../../../molecule/PokemonInfo";
 import { PokemonInfoProps } from "../../../models/molecule/pokemonInfo.model";
 
