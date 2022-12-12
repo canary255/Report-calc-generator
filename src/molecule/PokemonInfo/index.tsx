@@ -12,7 +12,7 @@ const ShowPokemonInfo = ({ pokemon, type }: ShowInfoProps) => {
     <Grid
       container
       direction="column"
-      sx={{ m: 1, backgroundColor: getColor(pokemon?.color) }}
+      sx={{ mt: 2, mb: 1, backgroundColor: getColor(pokemon?.color) }}
     >
       <Grid item>
         <TypographyComponent variant="body1">
@@ -31,15 +31,19 @@ const ShowPokemonInfo = ({ pokemon, type }: ShowInfoProps) => {
 
 export const PokemonInfo = ({ pokemon }: PokemonInfoProps) => {
   return (
-    <Grid container spacing={2} sx={{ ml: 2, mt: 1 }}>
-      <Grid container direction="row" justifyContent="left" alignItems="center">
-        <Sprite src={pokemon?.src} backgroundColor={pokemon?.color} />
-        <TypographyComponent variant="h5">{pokemon?.name}</TypographyComponent>
-
-        <ShowPokemonInfo pokemon={pokemon?.standard} type="standard" />
-        <ShowPokemonInfo pokemon={pokemon?.extreme} type="extreme" />
-        <ShowPokemonInfo pokemon={pokemon?.optimal} type="optimal" />
+    <Grid container direction="row" alignItems="center">
+      <Grid item xs={3}>
+        <Sprite size={64} src={pokemon?.src} backgroundColor={pokemon?.color} />
       </Grid>
+      <Grid item>
+        <TypographyComponent variant="h5">{pokemon?.name}</TypographyComponent>
+      </Grid>
+
+      <ShowPokemonInfo pokemon={pokemon?.standard} type="standard" />
+      <ShowPokemonInfo pokemon={pokemon?.extreme} type="extreme" />
+      {pokemon.optimal ? (
+        <ShowPokemonInfo pokemon={pokemon?.optimal} type="optimal" />
+      ) : null}
     </Grid>
   );
 };
